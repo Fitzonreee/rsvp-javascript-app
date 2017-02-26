@@ -1,0 +1,55 @@
+$lightGray: rgba(218, 218, 218, 0.65);
+$green: #20BF55;
+$darkBlue: #0B4F6C;
+$brightBlue: #01BAEF;
+$ghostWhite: #FBFBFF;
+$sonicSilver: #757575;
+
+.wrapper {
+  width: 100%;
+  margin: 0 auto;
+  padding: 40px;
+  background-color: $darkBlue;
+  border-radius: 4px;
+
+  /* TEXT */
+  h1, h2 {
+    font-family: 'Abril Fatface', cursive;
+    color: $ghostWhite;
+  }
+  h1 {
+    font-size: 10em;
+    font-weight: 100;
+    margin: 0;
+    letter-spacing: 9px;
+  }
+  h2 {letter-spacing: 2px;}
+  ul {
+    padding: 0;
+    li {
+      font-family: 'Lato', sans-serif;
+      list-style-type: none;
+      background-color: $ghostWhite;
+      padding: 15px;
+      margin: 20px 0;
+      border-radius: 4px;
+      &.responded {
+        background-color: $green;
+      }
+      p {
+        margin: 10px 0;
+        font-weight: 400 !important;
+      }
+      label {
+        display: inline-block;
+        padding: 4px 10px;
+        border: 1px solid lighten(black, 70%);
+        border-radius: 4px;
+        font-weight: 100;
+      }
+    }
+  }
+
+
+
+} // end of /.wrapper
