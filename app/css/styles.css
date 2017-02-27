@@ -27,7 +27,7 @@ html, body {
     display: inline-flex;
     box-sizing: border-box;
     height: 100px;
-    text-transform: uppercase; }
+    letter-spacing: 2px; }
   #registrar input[type="text"] {
     flex-grow: 3;
     border-right: none;
@@ -36,18 +36,23 @@ html, body {
     border-width: 1px;
     border: 1px solid rgba(218, 218, 218, 0.65); }
   #registrar input[type="text"]::-webkit-input-placeholder {
-    font-size: 2em; }
+    font-size: 2em;
+    padding-left: 50px; }
   #registrar input:-webkit-autofill {
     background-color: none; }
   #registrar button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 20%;
     appearance: none;
     -webkit-appearance: none;
     border: 1px solid rgba(218, 218, 218, 0.65);
     background: none;
     padding: 0; }
-    #registrar button #btnText {
-      justify-content: center; }
+    #registrar button span {
+      font-size: 24px;
+      text-transform: uppercase; }
 
 #invitedList {
   padding: 0;
