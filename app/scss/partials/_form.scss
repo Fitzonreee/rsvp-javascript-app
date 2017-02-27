@@ -6,7 +6,6 @@
     box-sizing: border-box;
     height: 100px;
     letter-spacing: 2px;
-
   }
   input[type="text"] {
     flex-grow: 3;
@@ -15,13 +14,14 @@
     border: none;
     border-width: 1px;
     border: 1px solid $lightGray;
-  }
-  input[type="text"]::-webkit-input-placeholder {
     font-size: 2em;
-    padding-left: 50px;
+    padding: 0 50px;
+  }
+  input[type="text"],
+  input[type="text"]::-webkit-input-placeholder {
+
   }
   input:-webkit-autofill {background-color: none;}
-
   button {
     display: flex;
     justify-content: center;
