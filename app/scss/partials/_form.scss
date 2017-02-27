@@ -5,9 +5,28 @@
     display: inline-flex;
     box-sizing: border-box;
     height: 100px;
+    text-transform: uppercase;
   }
-  input {flex-grow: 3;}
+  input[type="text"] {
+    flex-grow: 3;
+    border-right: none;
+    border-style: solid;
+    border: none;
+    border-width: 1px;
+    border: 1px solid $lightGray;
+  }
   input[type="text"]::-webkit-input-placeholder {font-size: 2em;}
   input:-webkit-autofill {background-color: none;}
-  button {width: 20%;}
+
+  button {
+    width: 20%;
+    appearance: none;
+    -webkit-appearance: none;
+    border: 1px solid $lightGray;
+    background: none;
+    padding: 0;
+    #btnText {
+      justify-content: center;
+    }
+  }
 }

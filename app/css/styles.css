@@ -1,3 +1,6 @@
+* {
+  font-family: 'Lato'; }
+
 html, body {
   margin: 0;
   padding: 0; }
@@ -23,15 +26,28 @@ html, body {
   #registrar input, #registrar button {
     display: inline-flex;
     box-sizing: border-box;
-    height: 100px; }
-  #registrar input {
-    flex-grow: 3; }
+    height: 100px;
+    text-transform: uppercase; }
+  #registrar input[type="text"] {
+    flex-grow: 3;
+    border-right: none;
+    border-style: solid;
+    border: none;
+    border-width: 1px;
+    border: 1px solid rgba(218, 218, 218, 0.65); }
   #registrar input[type="text"]::-webkit-input-placeholder {
     font-size: 2em; }
   #registrar input:-webkit-autofill {
     background-color: none; }
   #registrar button {
-    width: 20%; }
+    width: 20%;
+    appearance: none;
+    -webkit-appearance: none;
+    border: 1px solid rgba(218, 218, 218, 0.65);
+    background: none;
+    padding: 0; }
+    #registrar button #btnText {
+      justify-content: center; }
 
 #invitedList {
   padding: 0;
