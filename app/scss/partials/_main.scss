@@ -1,0 +1,28 @@
+#invitedList {
+  padding: 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  margin: 0;
+  li {
+    font-family: 'Lato', sans-serif;
+    list-style-type: none;
+    background-color: $ghostWhite;
+    width: 33.333%;
+    height: 300px;
+    &.responded {
+      background-color: $green;
+    }
+    p {
+      margin: 10px 0;
+      font-weight: 400 !important;
+    }
+    label {
+      display: inline-block;
+      padding: 4px 10px;
+      border: 1px solid lighten(black, 70%);
+      border-radius: 4px;
+      font-weight: 100;
+    }
+  }
+}

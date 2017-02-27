@@ -6,19 +6,6 @@ html, body {
   width: 100%;
   margin: 0 auto;
   /* TEXT */ }
-  .wrapper #registrar {
-    display: flex;
-    width: 100%; }
-    .wrapper #registrar input, .wrapper #registrar button {
-      display: inline-flex;
-      box-sizing: border-box;
-      height: 15vh; }
-    .wrapper #registrar input {
-      flex-grow: 3; }
-    .wrapper #registrar input[type="text"]::-webkit-input-placeholder {
-      font-size: 2em; }
-    .wrapper #registrar button {
-      width: 20%; }
   .wrapper h1, .wrapper h2 {
     font-family: 'Abril Fatface', cursive;
     color: #fbd404; }
@@ -29,26 +16,43 @@ html, body {
     letter-spacing: 9px; }
   .wrapper h2 {
     letter-spacing: 2px; }
-  .wrapper #invitedList {
-    padding: 0;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: flex-start;
-    margin: 0; }
-    .wrapper #invitedList li {
-      font-family: 'Lato', sans-serif;
-      list-style-type: none;
-      background-color: #fbd404;
-      width: 33.333%;
-      height: 300px; }
-      .wrapper #invitedList li.responded {
-        background-color: #20BF55; }
-      .wrapper #invitedList li p {
-        margin: 10px 0;
-        font-weight: 400 !important; }
-      .wrapper #invitedList li label {
-        display: inline-block;
-        padding: 4px 10px;
-        border: 1px solid #b3b3b3;
-        border-radius: 4px;
-        font-weight: 100; }
+
+#registrar {
+  display: flex;
+  width: 100%; }
+  #registrar input, #registrar button {
+    display: inline-flex;
+    box-sizing: border-box;
+    height: 100px; }
+  #registrar input {
+    flex-grow: 3; }
+  #registrar input[type="text"]::-webkit-input-placeholder {
+    font-size: 2em; }
+  #registrar input:-webkit-autofill {
+    background-color: none; }
+  #registrar button {
+    width: 20%; }
+
+#invitedList {
+  padding: 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  margin: 0; }
+  #invitedList li {
+    font-family: 'Lato', sans-serif;
+    list-style-type: none;
+    background-color: #fbd404;
+    width: 33.333%;
+    height: 300px; }
+    #invitedList li.responded {
+      background-color: #20BF55; }
+    #invitedList li p {
+      margin: 10px 0;
+      font-weight: 400 !important; }
+    #invitedList li label {
+      display: inline-block;
+      padding: 4px 10px;
+      border: 1px solid #b3b3b3;
+      border-radius: 4px;
+      font-weight: 100; }
