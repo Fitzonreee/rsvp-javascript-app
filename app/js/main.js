@@ -42,7 +42,7 @@ form.addEventListener('submit', (e) => {
   input.value = '';
 });
 
-// Add an eventListener so when checkbox is click a class of 'responded' is added
+// Add an eventListener so when checkbox is clicked a class of 'responded' is added
 ul.addEventListener('change', (e) => {
   // console.log(e.target.checked);
   const checkbox = event.target;
