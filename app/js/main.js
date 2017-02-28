@@ -56,3 +56,12 @@ ul.addEventListener('change', (e) => {
     listItem.className = '';
   }
 });
+
+// Click event that corresponds to 'Remove' button
+ul.addEventListener('click', (e) => {
+  if (e.target.tagName === 'BUTTON') {
+    const li = e.target.parentNode;
+    const ul = li.parentNode;
+    ul.removeChild(li);
+  }
+});
