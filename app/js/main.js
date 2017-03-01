@@ -1,9 +1,13 @@
-
+// RSVP JavaScript App
 const form = document.getElementById('registrar');
 const input = form.querySelector('input');
 // Get ul where names will be stored as li's (Global scope for ultimate access)
 const ul = document.getElementById('invitedList');
 
+// Add div with checkbox to toggle invitees that haven't responded
+const div = document.createElement('div');
+const filterLabel = document.createElement('label');
+const filterCheckBox = document.createElement('input');
 
 // Add check to lower RGBA value before appending next li
 function createListItem(text) {
@@ -22,11 +26,11 @@ function createListItem(text) {
   li.appendChild(label);
   // Add edit button to change name
   const editButton = document.createElement('button');
-  editButton.textContent = 'Edit';
+  editButton.textContent = 'edit';
   li.appendChild(editButton);
   // Add a Remove button to each li as it is created - just like checkbox
   const removeButton = document.createElement('button');
-  removeButton.textContent = 'Remove';
+  removeButton.textContent = 'remove';
   li.appendChild(removeButton);
   // Append li inside ul - this is breaking the current createListItem function
   if (text != '') {
@@ -63,22 +67,29 @@ ul.addEventListener('change', (e) => {
   }
 });
 
-// Click event that corresponds to 'Remove' button
+// Click event that corresponds to remove/edit/save button
 ul.addEventListener('click', (e) => {
   if (e.target.tagName === 'BUTTON') {
     const button = e.target;
     const li = button.parentNode;
     const ul = li.parentNode;
-    if (button.textContent === 'Remove') {
+    if (button.textContent === 'remove') {
       ul.removeChild(li);
-    } else if (button.textContent === 'Edit') {
+    } else if (button.textContent === 'edit') {
       const span = li.firstElementChild;
       const input = document.createElement('input');
       input.type = 'text';
       input.value = span.textContent;
       li.insertBefore(input, span);
       li.removeChild(span);
-      button.textContent = 'Save';
+      button.textContent = 'save';
+    } else if (button.textContent === 'save') {
+      const input = li.firstElementChild;
+      const span = document.createElement('span');
+      span.textContent = input.value;
+      li.insertBefore(span, input);
+      li.removeChild(input);
+      button.textContent = 'edit';
     }
   }
 });
