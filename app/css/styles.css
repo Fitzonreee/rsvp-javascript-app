@@ -35,8 +35,11 @@ html, body {
     border: none;
     border-width: 1px;
     border: 1px solid rgba(218, 218, 218, 0.65);
-    font-size: 2em;
+    font-size: 1.65em;
     padding: 0 50px; }
+  #registrar input[type="text"],
+  #registrar input[type="text"]::-webkit-input-placeholder {
+    font-size: 1.25em; }
   #registrar input:focus,
   #registrar button:focus {
     outline: none; }

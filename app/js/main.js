@@ -4,6 +4,8 @@ const input = form.querySelector('input');
 // Get ul where names will be stored as li's (Global scope for ultimate access)
 const ul = document.getElementById('invitedList');
 
+
+// Add check to lower RGBA value before appending next li
 function createListItem(text) {
   // Create li to append to ul
   const li = document.createElement('li');
@@ -18,10 +20,17 @@ function createListItem(text) {
   checkbox.type = 'checkbox';
   label.appendChild(checkbox);
   li.appendChild(label);
+
+
+  // Add edit button to change name
+  const editButton = document.createElement('button');
+  editButton.textContent = 'Edit';
+  li.appendChild(editButton);
+
   // Add a Remove button to each li as it is created - just like checkbox
-  const button = document.createElement('button');
-  button.textContent = 'Remove';
-  li.appendChild(button);
+  const removeButton = document.createElement('button');
+  removeButton.textContent = 'Remove';
+  li.appendChild(removeButton);
   // Append li inside ul - this is breaking the current createListItem function
   if (text != '') {
     ul.appendChild(li);
@@ -60,8 +69,13 @@ ul.addEventListener('change', (e) => {
 // Click event that corresponds to 'Remove' button
 ul.addEventListener('click', (e) => {
   if (e.target.tagName === 'BUTTON') {
-    const li = e.target.parentNode;
+    const button = e.target;
+    const li = button.parentNode;
     const ul = li.parentNode;
-    ul.removeChild(li);
+    if (button.textContent === 'Remove') {
+      ul.removeChild(li);
+    } else if (button.textContent === 'Edit') {
+      console.log('You clicked the edit button');
+    }
   }
 });

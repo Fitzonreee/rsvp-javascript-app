@@ -14,12 +14,12 @@
     border: none;
     border-width: 1px;
     border: 1px solid $lightGray;
-    font-size: 2em;
+    font-size: 1.65em;
     padding: 0 50px;
   }
   input[type="text"],
   input[type="text"]::-webkit-input-placeholder {
-
+    font-size: 1.25em;
   }
   input:focus,
   button:focus {
