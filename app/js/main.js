@@ -10,9 +10,9 @@ function createListItem(text) {
   // Create li to append to ul
   const li = document.createElement('li');
   // Create and populate p with content from input field (name) and insert in li
-  const p = document.createElement('p');
-  p.textContent = text;
-  li.appendChild(p);
+  const span = document.createElement('span');
+  span.textContent = text;
+  li.appendChild(span);
   // Add a 'Confirmed' checkbox inside an input element to the li
   const label = document.createElement('label');
   label.textContent = 'Confirmed';
@@ -20,13 +20,10 @@ function createListItem(text) {
   checkbox.type = 'checkbox';
   label.appendChild(checkbox);
   li.appendChild(label);
-
-
   // Add edit button to change name
   const editButton = document.createElement('button');
   editButton.textContent = 'Edit';
   li.appendChild(editButton);
-
   // Add a Remove button to each li as it is created - just like checkbox
   const removeButton = document.createElement('button');
   removeButton.textContent = 'Remove';
@@ -75,7 +72,13 @@ ul.addEventListener('click', (e) => {
     if (button.textContent === 'Remove') {
       ul.removeChild(li);
     } else if (button.textContent === 'Edit') {
-      console.log('You clicked the edit button');
+      const span = li.firstElementChild;
+      const input = document.createElement('input');
+      input.type = 'text';
+      input.value = span.textContent;
+      li.insertBefore(input, span);
+      li.removeChild(span);
+      button.textContent = 'Save';
     }
   }
 });

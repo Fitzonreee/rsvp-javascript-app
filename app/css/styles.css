@@ -78,7 +78,8 @@ html, body {
     height: 300px; }
     #invitedList li.responded {
       background-color: #20BF55; }
-    #invitedList li p {
+    #invitedList li span {
+      display: block;
       margin: 10px 0;
       font-weight: 400 !important; }
     #invitedList li label {

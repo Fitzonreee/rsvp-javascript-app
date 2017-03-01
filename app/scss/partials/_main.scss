@@ -10,10 +10,9 @@
     background-color: $ghostWhite;
     width: 33.333%;
     height: 300px;
-    &.responded {
-      background-color: $green;
-    }
-    p {
+    &.responded {background-color: $green;}
+    span {
+      display: block;
       margin: 10px 0;
       font-weight: 400 !important;
     }
