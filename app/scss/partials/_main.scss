@@ -1,27 +1,35 @@
-#invitedList {
-  padding: 0;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: flex-start;
-  margin: 0;
-  li {
-    font-family: 'Lato', sans-serif;
-    list-style-type: none;
-    background-color: $ghostWhite;
-    width: 33.333%;
-    height: 300px;
-    &.responded {background-color: $green;}
-    span {
-      display: block;
-      margin: 10px 0;
-      font-weight: 400 !important;
-    }
-    label {
-      display: inline-block;
-      font-weight: 100;
+.main {
+  .toggleResponses {
+    padding: 10px 0;
+    border-bottom: 1px solid $lightGray;
+  }
+  #invitedList {
+    padding: 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    margin: 0;
+    li {
+      font-family: 'Lato', sans-serif;
+      list-style-type: none;
+      background-color: $ghostWhite;
+      width: 33.333%;
+      height: 300px;
+      &.responded {background-color: $green;}
+      span {
+        display: block;
+        margin: 10px 0;
+        font-weight: 400 !important;
+      }
+      label {
+        display: inline-block;
+        font-weight: 100;
+      }
     }
   }
 }
+
+
 
 // TODO: Style li content and make confirm and remove images or SVGs
 // TODO: Find a way with either JS or Sass to lessen RGBA value of each li

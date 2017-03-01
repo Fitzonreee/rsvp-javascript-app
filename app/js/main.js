@@ -1,6 +1,7 @@
 // RSVP JavaScript App
 const form = document.getElementById('registrar');
 const input = form.querySelector('input');
+const mainDiv = document.querySelector('.main');
 // Get ul where names will be stored as li's (Global scope for ultimate access)
 const ul = document.getElementById('invitedList');
 
@@ -8,6 +9,33 @@ const ul = document.getElementById('invitedList');
 const div = document.createElement('div');
 const filterLabel = document.createElement('label');
 const filterCheckBox = document.createElement('input');
+filterLabel.textContent = "See who is coming!";
+filterCheckBox.type = 'checkbox';
+div.className = "toggleResponses";
+div.appendChild(filterCheckBox);
+div.appendChild(filterLabel);
+mainDiv.insertBefore(div, ul);
+
+// Add eventListener to checkbox to toggle responses
+filterCheckBox.addEventListener('change', (e) => {
+  const isChecked = e.target.checked;
+  const lis = ul.children;
+  if (isChecked) {
+    for (let i = 0; i < lis.length; i++) {
+      let li = lis[i];
+      if (li.className === 'responded') {
+        li.style.display = '';
+      } else {
+        li.style.display = 'none';
+      }
+    }
+  } else {
+    for (let i = 0; i < lis.length; i++) {
+      let li = lis[i];
+      li.style.display = '';
+    }
+  }
+});
 
 // Add check to lower RGBA value before appending next li
 function createListItem(text) {

@@ -64,24 +64,28 @@ html, body {
       font-size: 24px;
       text-transform: uppercase; }
 
-#invitedList {
+.main .toggleResponses {
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(218, 218, 218, 0.65); }
+
+.main #invitedList {
   padding: 0;
   display: flex;
   flex-flow: row wrap;
   justify-content: flex-start;
   margin: 0; }
-  #invitedList li {
+  .main #invitedList li {
     font-family: 'Lato', sans-serif;
     list-style-type: none;
     background-color: #fbd404;
     width: 33.333%;
     height: 300px; }
-    #invitedList li.responded {
+    .main #invitedList li.responded {
       background-color: #20BF55; }
-    #invitedList li span {
+    .main #invitedList li span {
       display: block;
       margin: 10px 0;
       font-weight: 400 !important; }
-    #invitedList li label {
+    .main #invitedList li label {
       display: inline-block;
       font-weight: 100; }
