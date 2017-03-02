@@ -125,6 +125,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const button = e.target;
       const li = button.parentNode;
       const ul = li.parentNode;
+      const action = button.textContent;
       const nameActions = {
         remove: () => {
           ul.removeChild(li);
@@ -147,15 +148,14 @@ document.addEventListener('DOMContentLoaded', () => {
           button.textContent = 'edit';
         }
       };
-
-      if (button.textContent === 'remove') {
-        nameActions.remove();
-      } else if (button.textContent === 'edit') {
-        nameActions.edit();
-      } else if (button.textContent === 'save') {
-        nameActions.save();
-      }
+      // select and run action in button's name
+      nameActions[action]();
     }
   });
-
 }); // end DOMContentLoaded
+
+// TODO: Add From validation - alert user
+// TODO: Prevent duplicate name
+// TODO: Text nodes - have it say 'Confirm', once checked = "Confirmed"
+// TODO: When you toggle confirmed guests, remove confirmed checkbox from li
+// TODO: Use Local Storage to allow names to persist
