@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
       console.log('This is an li');
       span.textContent = count;
       menu.appendChild(span);
-      
+
     } else {
       menu.appendChild(span);
     }
@@ -60,32 +60,33 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Add check to lower RGBA value before appending next li
   function createListItem(text) {
-    // Create li to append to ul
+
+    // Create a function that creates Elements for you
+    function createElement(elementName, property, value) {
+      const element = document.createElement(elementName);
+      element[property] = value;
+      return element;
+    }
+
+    // Create a function for appending elements to the UL
+    function appendToLI(elementName, property, value) {
+      const element = createElement(elementName, property, value);
+      li.appendChild(element);
+      return element;
+    }
+
+    // Combination of above two function
     const li = document.createElement('li');
-    // Create and populate p with content from input field (name) and insert in li
-    const span = document.createElement('span');
-    span.textContent = text;
-    li.appendChild(span);
-    // Add a 'Confirmed' checkbox inside an input element to the li
-    const label = document.createElement('label');
-    label.textContent = 'Confirmed';
-    const checkbox = document.createElement('input');
-    checkbox.type = 'checkbox';
-    li.appendChild(checkbox);
-    li.appendChild(label);
-    // Add edit button to change name
-    const editButton = document.createElement('button');
-    editButton.textContent = 'edit';
-    li.appendChild(editButton);
-    // Add a Remove button to each li as it is created - just like checkbox
-    const removeButton = document.createElement('button');
-    removeButton.textContent = 'remove';
-    li.appendChild(removeButton);
-    // Append li inside ul - this is breaking the current createListItem function
+    appendToLI('span', 'textContent', text);
+    appendToLI('input', 'type', 'checkbox');
+    appendToLI('label', 'textContent', 'Confirmed');
+    appendToLI('button', 'textContent', 'edit');
+    appendToLI('button', 'textContent', 'remove');
+
+    // Append li inside ul if it isn't blank
     if (text != '') {
       ul.appendChild(li);
       getCount();
-
     } else {
       console.log('Please enter a name before submitting.');
     }
