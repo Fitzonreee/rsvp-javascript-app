@@ -2,6 +2,18 @@
   .toggleResponses {
     padding: 10px 0;
     border-bottom: 1px solid $lightGray;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    text-align: center;
+    font-weight: 400;
+    input[type="checkbox"] {
+      margin-right: 10px;
+      border-radius: 0;
+    }
+    input[type="checkbox"]:focus {
+      outline: none;
+    }
   }
   #invitedList {
     padding: 0;
@@ -19,11 +31,30 @@
       span {
         display: block;
         margin: 10px 0;
-        font-weight: 400 !important;
+        font-weight: 100 !important;
+        font-size: 2.75rem;
+        letter-spacing: 2px;
+        padding: 10%;
       }
-      label {
-        display: inline-block;
+      label, button {
         font-weight: 100;
+        letter-spacing: 2px;
+        font-size: 0.95rem;
+        // margin-left: 20px;
+      }
+      button {
+        appearance: none;
+        -webkit-appearance: none;
+        background: none;
+        border: none;
+        margin-top: 15px;
+        padding-left: 10%;
+      }
+      input[type="checkbox"] {
+        background-color: red;
+        margin-left: 10%;
+        margin-right: 8px;
+        outline: none;
       }
     }
   }
@@ -33,3 +64,4 @@
 
 // TODO: Style li content and make confirm and remove images or SVGs
 // TODO: Find a way with either JS or Sass to lessen RGBA value of each li
+// TODO: You need to refactor this without just specificity once the project is done

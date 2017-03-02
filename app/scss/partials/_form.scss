@@ -6,6 +6,7 @@
     box-sizing: border-box;
     height: 100px;
     letter-spacing: 2px;
+    font-weight: 100;
   }
   input[type="text"] {
     flex-grow: 3;
@@ -22,7 +23,8 @@
     font-size: 1.25em;
   }
   input:focus,
-  button:focus {
+  button:focus,
+  input[type="checkbox"]:focus {
     outline: none;
   }
   input:-webkit-autofill,

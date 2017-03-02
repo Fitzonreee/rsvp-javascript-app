@@ -50,7 +50,7 @@ function createListItem(text) {
   label.textContent = 'Confirmed';
   const checkbox = document.createElement('input');
   checkbox.type = 'checkbox';
-  label.appendChild(checkbox);
+  li.appendChild(checkbox);
   li.appendChild(label);
   // Add edit button to change name
   const editButton = document.createElement('button');
@@ -85,7 +85,7 @@ ul.addEventListener('change', (e) => {
   // console.log(e.target.checked);
   const checkbox = event.target;
   const checked = checkbox.checked;
-  const listItem = checkbox.parentNode.parentNode;
+  const listItem = checkbox.parentNode;
   // console.log(listItem);
 
   if (checked) {
