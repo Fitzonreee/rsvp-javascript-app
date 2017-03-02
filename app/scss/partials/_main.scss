@@ -7,6 +7,7 @@
     letter-spacing: 2px;
     text-align: center;
     font-weight: 400;
+    background-color: lighten($lightGray, 0.85);
     input[type="checkbox"] {
       margin-right: 10px;
       border-radius: 0;

@@ -37,6 +37,18 @@ filterCheckBox.addEventListener('change', (e) => {
   }
 });
 
+// Testing
+function getCount() {
+  const ul = document.getElementById('invitedList');
+  const menu = document.querySelector('.toggleResponses');
+  const span = document.createElement('span');
+
+  let count = ul.children.length;
+  span.textContent = count;
+  // if first child exists, remove it, else replace with new count value
+  menu.appendChild(span);
+}
+
 // Add check to lower RGBA value before appending next li
 function createListItem(text) {
   // Create li to append to ul
@@ -78,6 +90,7 @@ form.addEventListener('submit', (e) => {
   const li = createListItem(text);
   // Remove name from input after submitting
   input.value = '';
+  getCount();
 });
 
 // Add an eventListener so when checkbox is clicked a class of 'responded' is added
@@ -87,7 +100,6 @@ ul.addEventListener('change', (e) => {
   const checked = checkbox.checked;
   const listItem = checkbox.parentNode;
   // console.log(listItem);
-
   if (checked) {
     listItem.className = 'responded';
   } else {
