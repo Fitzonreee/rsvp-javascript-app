@@ -1,10 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-  // RSVP JavaScript App
   const form = document.getElementById('registrar');
   const input = form.querySelector('input');
   const mainDiv = document.querySelector('.main');
-  // Get ul where names will be stored as li's (Global scope for ultimate access)
   const ul = document.getElementById('invitedList');
 
   // Add div with checkbox to toggle invitees that haven't responded
@@ -39,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // Testing
+  // Testing - clean this up (It is digusting)
   function getCount() {
     const ul = document.getElementById('invitedList');
     const menu = document.querySelector('.toggleResponses');
@@ -52,13 +50,13 @@ document.addEventListener('DOMContentLoaded', () => {
       console.log('This is an li');
       span.textContent = count;
       menu.appendChild(span);
-
     } else {
       menu.appendChild(span);
     }
   }
 
-  // Add check to lower RGBA value before appending next li
+  // TODO: Add check to lower RGBA value before appending next li
+
   function createListItem(text) {
 
     // Create a function that creates Elements for you
@@ -75,7 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
       return element;
     }
 
-    // Combination of above two function
+    // Combination of the above two functions
     const li = document.createElement('li');
     appendToLI('span', 'textContent', text);
     appendToLI('input', 'type', 'checkbox');
@@ -111,7 +109,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const checkbox = event.target;
     const checked = checkbox.checked;
     const listItem = checkbox.parentNode;
-    // console.log(listItem);
+
     if (checked) {
       listItem.className = 'responded';
     } else {
@@ -149,6 +147,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       };
       // select and run action in button's name
+      // Unclear as to how 'action' is linked to remove/edit/save
       nameActions[action]();
     }
   });

@@ -1,3 +1,6 @@
+// TODO: Globalize all form elements, don't nest under #registrar
+// TODO: Add specific styling related to form elements to this stylesheet
+
 #registrar {
   display: flex;
   width: 100%;
@@ -43,13 +46,9 @@
     border: 1px solid $lightGray;
     background: none;
     padding: 0;
-    // background-color: rgba(218, 218, 218, 0.85);
-
     span {
       font-size: 24px;
       text-transform: uppercase;
     }
   }
 }
-
-// TODO: Remove yellow and blue border from form input
