@@ -6,17 +6,18 @@ document.addEventListener('DOMContentLoaded', () => {
   const ul = document.getElementById('invitedList');
 
   // Add div with checkbox to toggle invitees that haven't responded
-  const div = document.createElement('div');
-  const filterLabel = document.createElement('label');
-  const filterCheckBox = document.createElement('input');
-  filterLabel.textContent = "See who is coming";
-  filterCheckBox.type = 'checkbox';
-  div.className = "toggleResponses";
-  div.appendChild(filterCheckBox);
-  div.appendChild(filterLabel);
-  mainDiv.insertBefore(div, ul);
+  // const menu = document.querySelector('.menu');
+  // const div = document.createElement('div');
+  // const filterLabel = document.createElement('label');
+  // const filterCheckBox = document.createElement('input');
+  // filterLabel.textContent = "See who is coming";
+  // filterCheckBox.type = 'checkbox';
+  // div.appendChild(filterCheckBox);
+  // div.appendChild(filterLabel);
+  // menu.appendChild(div);
 
   // Add eventListener to checkbox to toggle responses
+  const filterCheckBox = document.getElementById('attending');
   filterCheckBox.addEventListener('change', (e) => {
     const isChecked = e.target.checked;
     const lis = ul.children;
@@ -40,7 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Testing - clean this up (It is digusting)
   function getCount() {
     const ul = document.getElementById('invitedList');
-    const menu = document.querySelector('.toggleResponses');
+    // const menu = document.querySelector('.toggleResponses');
     const span = document.createElement('span');
 
     let el = ul.firstElementChild
@@ -49,9 +50,9 @@ document.addEventListener('DOMContentLoaded', () => {
     if (el = "li") {
       console.log('This is an li');
       span.textContent = count;
-      menu.appendChild(span);
+      // menu.appendChild(span);
     } else {
-      menu.appendChild(span);
+      // menu.appendChild(span);
     }
   }
 

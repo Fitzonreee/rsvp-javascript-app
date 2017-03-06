@@ -62,8 +62,7 @@ html, body {
   font-size: 0.75rem;
   letter-spacing: 2px;
   text-align: center;
-  font-weight: 400;
-  background-color: rgba(218, 218, 218, 0.15); }
+  font-weight: 100; }
   .main .toggleResponses input[type="checkbox"] {
     margin-right: 10px;
     border-radius: 0; }
