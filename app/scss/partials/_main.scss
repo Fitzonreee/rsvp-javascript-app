@@ -16,9 +16,7 @@
     input[type="checkbox"] {
       margin-right: 10px;
       border-radius: 0;
-    }
-    input[type="checkbox"]:focus {
-      outline: none;
+      :focus {outline: none;}
     }
   }
   #invitedList {
@@ -46,7 +44,6 @@
         font-weight: 100;
         letter-spacing: 2px;
         font-size: 0.95rem;
-        // margin-left: 20px;
       }
       button {
         appearance: none;
@@ -57,7 +54,6 @@
         padding-left: 10%;
       }
       input[type="checkbox"] {
-        background-color: red;
         margin-left: 10%;
         margin-right: 8px;
         outline: none;

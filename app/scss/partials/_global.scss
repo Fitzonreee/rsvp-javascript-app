@@ -1,5 +1,4 @@
-// TODO: Create responsive styles for flexbox compnents
-// TODO: Globalize everything that is used more than once (DRY)
+// TODO: Create responsive styles for flexbox components
 
 * { font-family: 'Lato';}
 
@@ -11,16 +10,4 @@ html,body {
 .wrapper {
   width: 100%;
   margin: 0 auto;
-  /* TEXT */
-  h1, h2 {
-    font-family: 'Abril Fatface', cursive;
-    color: $ghostWhite;
-  }
-  h1 {
-    font-size: 10em;
-    font-weight: 100;
-    margin: 0;
-    letter-spacing: 9px;
-  }
-  h2 {letter-spacing: 2px;}
 }

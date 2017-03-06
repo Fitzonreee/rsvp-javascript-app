@@ -7,18 +7,7 @@ html, body {
 
 .wrapper {
   width: 100%;
-  margin: 0 auto;
-  /* TEXT */ }
-  .wrapper h1, .wrapper h2 {
-    font-family: 'Abril Fatface', cursive;
-    color: #fbd404; }
-  .wrapper h1 {
-    font-size: 10em;
-    font-weight: 100;
-    margin: 0;
-    letter-spacing: 9px; }
-  .wrapper h2 {
-    letter-spacing: 2px; }
+  margin: 0 auto; }
 
 #registrar {
   display: flex;
@@ -78,8 +67,8 @@ html, body {
   .main .toggleResponses input[type="checkbox"] {
     margin-right: 10px;
     border-radius: 0; }
-  .main .toggleResponses input[type="checkbox"]:focus {
-    outline: none; }
+    .main .toggleResponses input[type="checkbox"] :focus {
+      outline: none; }
 
 .main #invitedList {
   padding: 0;
@@ -114,7 +103,6 @@ html, body {
       margin-top: 15px;
       padding-left: 10%; }
     .main #invitedList li input[type="checkbox"] {
-      background-color: red;
       margin-left: 10%;
       margin-right: 8px;
       outline: none; }
