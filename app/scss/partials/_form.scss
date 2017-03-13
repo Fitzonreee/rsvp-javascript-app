@@ -1,6 +1,21 @@
 // TODO: Globalize all form elements, don't nest under #registrar
 // TODO: Add specific styling related to form elements to this stylesheet
 
+input[type="text"] {
+  display: inline-flex;
+  flex-grow: 1;
+  height: 100px;
+  padding: 0 50px;
+  font-size: 1.25em;
+  letter-spacing: 2px;
+  font-weight: 100;
+  box-sizing: border-box;
+  outline: none;
+  border: 1px solid $lightGray;
+}
+
+// Refactor below - global form styles above
+
 #registrar {
   display: flex;
   width: 100%;
