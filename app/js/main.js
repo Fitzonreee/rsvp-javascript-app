@@ -38,26 +38,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // Testing - clean this up (It is digusting)
-  function getCount() {
-    const ul = document.getElementById('invitedList');
-    // const menu = document.querySelector('.toggleResponses');
-    const span = document.createElement('span');
-
-    let el = ul.firstElementChild
-    let count = ul.children.length;
-
-    if (el = "li") {
-      console.log('This is an li');
-      span.textContent = count;
-      // menu.appendChild(span);
-    } else {
-      // menu.appendChild(span);
-    }
-  }
-
-  // TODO: Add check to lower RGBA value before appending next li
-
   function createListItem(text) {
 
     // Create a function that creates Elements for you
@@ -84,6 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Append li inside ul if it isn't blank
     if (text != '') {
+      // check if sibling exists? And modify styles accordingly?
       ul.appendChild(li);
       getCount();
     } else {
@@ -101,7 +82,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const li = createListItem(text);
     // Remove name from input after submitting
     input.value = '';
-    // getCount();
   });
 
   // Add an eventListener so when checkbox is clicked a class of 'responded' is added
@@ -153,6 +133,23 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 }); // end DOMContentLoaded
+
+// Testing - clean this up (It is digusting)
+function getCount() {
+  const ul = document.getElementById('invitedList');
+  let children = ul.childNodes;
+  // let count = ul.children.length;
+  console.log(children);
+
+  for (var i = 0; i < children.length; i++) {
+    console.log(children[i]);
+  }
+}
+
+
+
+
+
 
 // TODO: Add From validation - alert user
 // TODO: Prevent duplicate name
