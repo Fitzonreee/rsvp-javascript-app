@@ -136,14 +136,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Testing - clean this up (It is digusting)
 function getCount() {
-  const ul = document.getElementById('invitedList');
-  let children = ul.childNodes;
-  // let count = ul.children.length;
-  console.log(children);
+  const allListItems = document.querySelectorAll('#invitedList li');
 
-  for (var i = 0; i < children.length; i++) {
-    console.log(children[i]);
+  for (var i = 0; i < allListItems.length; i++) {
+    let increment = 1 - `${i / 10}`;
+    // console.log(increment);
+    if (increment === 0) {
+      // console.log("It's white!");
+    } else {
+      allListItems[i].style.backgroundColor = `rgba(251, 212, 4, ${increment})`;
+    }
   }
+
 }
 
 

@@ -100,7 +100,7 @@ input[type="text"] {
     width: 33.333%;
     height: 300px; }
     .main #invitedList li.responded {
-      background-color: #20BF55; }
+      background-color: #20BF55 !important; }
     .main #invitedList li span {
       display: block;
       margin: 10px 0;
